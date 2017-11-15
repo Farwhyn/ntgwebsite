@@ -19,7 +19,6 @@ import { MaterialsComponent } from './components/materials/materials.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app.routing';
-import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -30,8 +29,7 @@ import { CoreModule } from './core/core.module';
     AddItemComponent,
     MaterialsComponent,
     HomeComponent,
-    FooterComponent,
-    AuthenticationComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
