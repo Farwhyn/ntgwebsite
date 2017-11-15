@@ -1,4 +1,8 @@
-# Angularfs
+# UBC NTG Web App
+
+This is the front-end client for the UBC NTG Website using Angular 4 framework. Further work will be added to this repository. 
+
+## Development Details
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
