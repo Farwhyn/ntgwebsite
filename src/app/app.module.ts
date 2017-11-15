@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { environment } from '../environments/environment.prod';
 import { ItemsComponent } from './components/items/items.component';
 
@@ -17,6 +19,8 @@ import { MaterialsComponent } from './components/materials/materials.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app.routing';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -26,14 +30,17 @@ import { AppRoutingModule } from './app.routing';
     AddItemComponent,
     MaterialsComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]
