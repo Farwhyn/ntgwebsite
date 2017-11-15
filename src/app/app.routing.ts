@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ItemsComponent } from './components/items/items.component';
 import { AuthGuard } from './core/auth.guard';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 const appRoutes: Routes = [
     {
@@ -13,7 +14,12 @@ const appRoutes: Routes = [
     {
         path: 'items',
         component: AddItemComponent,
+    },
+    {
+        path: 'users',
+        component: UserProfileComponent,
     }
+
 ];
 
 @NgModule({
