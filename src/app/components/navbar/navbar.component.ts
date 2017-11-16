@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../../core/auth.service';
+import { Component, AfterViewInit } from '@angular/core';
+
 declare var jquery: any;
 declare var $: any;
 
@@ -7,11 +9,11 @@ declare var $: any;
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements AfterViewInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     $('.button-collapse').sideNav();
   }
 

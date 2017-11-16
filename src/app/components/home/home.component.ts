@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../../core/auth.service';
+import { Component, AfterViewInit } from '@angular/core';
+
 declare var jquery: any;
 declare var $: any;
 @Component({
@@ -6,11 +8,11 @@ declare var $: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     /*
     $(document).ready(function() {
       $('.carousel.carousel-slider').carousel({fullWidth: true});

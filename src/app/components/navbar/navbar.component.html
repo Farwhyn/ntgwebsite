@@ -5,7 +5,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#">Executive Team</a></li>
         <li><a href="#events">Events</a></li>
-        <li><a class="waves-effect waves-light btn red lighten-1" routerLink='/users' routerLinkActive="active">Login</a></li>
+        <li *ngIf="auth.user | async; then loggout else login"></li>
       </ul>
   
       <ul id="nav-mobile" class="side-nav">
@@ -18,3 +18,11 @@
     </div>
   </nav>
 </div>
+
+<ng-template #login>
+  <a class="waves-effect waves-light btn purple" (click)="auth.facebookLogin()">Login</a>
+</ng-template>
+
+<ng-template #loggout>
+  <a class="waves-effect waves-light btn purple" (click)="auth.signOut()">Loggout</a>
+</ng-template>
