@@ -21,6 +21,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core/core.module';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { CoreModule } from './core/core.module';
     MaterialsComponent,
     HomeComponent,
     FooterComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    DashboardComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     CoreModule
   ],
-  providers: [ItemService],
+  providers: [
+    ItemService,
+  ],
   bootstrap: [AppComponent]
 })
 
