@@ -1,3 +1,21 @@
-<p>
-  dashboard works!
-</p>
+<div class="container">
+  <br><br>
+  <h2 class="header center blue-text">UBC NTG Club Dashboard!</h2>
+  <div class="row center">
+    <h5 class="header col s12 light">Here you can view, signup, and manage your events.</h5>
+  </div>
+</div>
+
+<div *ngIf="auth.user | async as user" class="container">
+  <h5>Profile</h5>
+  <ul class="collection">
+    <li class="collection-item avatar">
+      <img [src]="user.photoURL" alt="" class="circle">
+      <span class="title"><b>Member Profile</b></span>
+      <p>{{ user.displayName}} <br>
+         {{user.member}}
+      </p>
+      <a class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
+</div>

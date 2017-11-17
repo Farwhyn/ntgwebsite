@@ -46,7 +46,8 @@ export class AuthService {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
-      photoURL: user.photoURL
+      member: user.member,
+      events: user.events
     };
 
     return userRef.set(data);
